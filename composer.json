@@ -17,5 +17,5 @@
       "caffeina-core/core": "dev-master",
       "caffeina-core/twig": "dev-master"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
