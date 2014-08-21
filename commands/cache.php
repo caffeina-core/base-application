@@ -5,10 +5,10 @@
  */
 
 Shell::alias('clearCache',function(){
- return Shell::sequence(
-   Shell::rm('-rf', APP_DIR.'/cache/*' ),
-   Shell::mkdir( APP_DIR.'/cache/objects', APP_DIR.'/cache/views' )
- ); 
+  return Shell::sequence(
+    Shell::rm('-rf', APP_DIR.'/cache/*' ),
+    Shell::mkdir( APP_DIR.'/cache/objects', APP_DIR.'/cache/views' )
+  ); 
 });
  
 CLI::on('cache :action',function($action){
