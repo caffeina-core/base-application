@@ -1,0 +1,6 @@
+{
+  "require": {
+    "caffeina-core/core": "dev-master",
+    "caffeina-core/twig": "dev-master"
+  }
+}
