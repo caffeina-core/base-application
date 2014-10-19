@@ -14,8 +14,9 @@
     ],
     "require": {
       "php": ">=5.4",
-      "caffeina-core/core": "dev-master",
-      "caffeina-core/twig": "dev-master"
+      "caffeina-core/core": "~1",
+      "caffeina-core/twig": "~1",
+      "caffeina-core/redis": "~1“
     },
     "minimum-stability": "stable"
 }
