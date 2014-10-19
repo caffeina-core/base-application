@@ -16,7 +16,7 @@
       "php": ">=5.4",
       "caffeina-core/core": "~1",
       "caffeina-core/twig": "~1",
-      "caffeina-core/redis": "~1“
+      "caffeina-core/redis": "~1"
     },
     "minimum-stability": "stable"
 }
