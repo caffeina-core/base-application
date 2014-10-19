@@ -3,14 +3,13 @@ Core - Application starter
 
 Web application vanilla template.
 
-
 ## Installation
 
 Create a new copy of this project via [composer](https://getcomposer.org/download/) 
 
-
 ```bash
-$ php composer.phar create-project -s dev caffeina-core/base-application ./my-awesome-new-app
+$ composer create-project caffeina-core/base-application ./my-awesome-new-app
+$ composer dumpautoload -o
 ```
 
 Done.
@@ -51,11 +50,11 @@ Assert that the document root of the virtualhost is pointing to `PATH_TO_YOUR_AP
 
 ```apache
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.php$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.php [L]
 </IfModule>
 ```
