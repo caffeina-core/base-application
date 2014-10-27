@@ -5,7 +5,7 @@ Web application vanilla template.
 
 ## Installation
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-sample)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/caffeina-core/base-application)
 
 Create a new copy of this project via [composer](https://getcomposer.org/download/) 
 
