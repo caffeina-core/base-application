@@ -5,6 +5,8 @@ Web application vanilla template.
 
 ## Installation
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-sample)
+
 Create a new copy of this project via [composer](https://getcomposer.org/download/) 
 
 ```bash
