@@ -5,7 +5,7 @@
  */
 
 return [
-  'debug' => false,
+  'debug' => true,
   'cache' => [
     'objects' => [
       'dir' => APP_DIR.'/cache/objects',
