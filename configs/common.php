@@ -5,13 +5,8 @@
  */
 
 return [
-  'debug' => true,
+  'debug' => true, // Disable when in production
   'cache' => [
-    'objects' => [
-      'dir' => APP_DIR.'/cache/objects',
-    ],
-    'views' => [
-      'dir' => APP_DIR.'/cache/views',
-    ],
+    'views' => true,
   ],
 ];

@@ -20,15 +20,20 @@ foreach (File::search(APP_DIR.'/configs/','*.php',false) as $opts) {
 Cache::using([
   'redis',
   'files' => [
-    'cache_dir' => Options::get('cache.objects.dir',APP_DIR.'/cache/objects')
+    'cache_dir' => APP_DIR.'/cache/objects'
   ],
 ]);
 
 // Init Views
 View::using(new View\Twig(APP_DIR.'/templates',[
-    'cache' => Options::get('cache.views.dir',APP_DIR.'/cache/views'),
-    'auto_reload' => Options::get('debug',false),
+    'cache'         => Options::get('cache.views',true) ? APP_DIR.'/cache/views' : false,
+    'auto_reload'   => Options::get('debug',false),
 ]));
+
+View::addGlobals([
+  'BASE_URL'  => rtrim(dirname($_SERVER['PHP_SELF']),'/').'/',
+  'CACHEBUST' => Options::get('debug',false) ? '?v='.time() : '',
+]);
 
 // App bootstrap
 include APP_DIR.'/boot.php';

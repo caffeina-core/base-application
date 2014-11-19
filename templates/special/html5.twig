@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    {% block head('') %}
+  </head>
+  <body{{ body_class ? ' class="'~body_class~'"' : '' }}>
+    {% block body('') %}
+    {% block body_after('') %}
+  </body>
+</html>
