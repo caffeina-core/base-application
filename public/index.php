@@ -18,15 +18,14 @@ foreach (File::search(APP_DIR.'/configs/','*.php',false) as $opts) {
 
 // Caching strategy
 Cache::using([
-  'redis',
   'files' => [
-    'cache_dir' => APP_DIR.'/cache/objects'
+    'cache_dir' => Options::get('cache.objects','/tmp')
   ],
 ]);
 
 // Init Views
 View::using(new View\Twig(APP_DIR.'/templates',[
-    'cache'         => Options::get('cache.views',true) ? APP_DIR.'/cache/views' : false,
+    'cache'         => Options::get('cache.views',true) ? '/tmp' : false,
     'auto_reload'   => Options::get('debug',false),
 ]));
 
