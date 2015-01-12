@@ -13,8 +13,16 @@ Create a new copy of this project via [composer](https://getcomposer.org/downloa
 $ composer create-project caffeina-core/base-application ./my-awesome-new-app
 $ composer dumpautoload -o
 ```
-
 Done.
+
+## Docker
+
+A complete PHP+NginX server is ready from 
+
+```bash
+docker pull caffeina/core-app
+```
+
 
 ## Front Controller
 
