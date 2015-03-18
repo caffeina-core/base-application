@@ -40,7 +40,7 @@ include APP_DIR.'/boot.php';
 Event::trigger('app.run');
 
 // Routes
-foreach (File::search(APP_DIR.'/routes/','*.php',false) as $routedef) include $routedef;
+foreach (glob(APP_DIR.'/routes/*.php') as $routedef) include $routedef;
 
 Event::trigger('app.dispatch');
 Route::dispatch();
