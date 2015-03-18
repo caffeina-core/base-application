@@ -17,5 +17,16 @@
       "caffeina-core/core": "*",
       "caffeina-core/twig": "*"
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "heroku": {
+            "framework": "silex",
+            "document-root": "public",
+            "index-document": "index.php",
+            "compile": [
+                "chmod +x app",
+                "chmod -R 777 cache"
+            ]
+        }
+    }
 }
