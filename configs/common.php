@@ -5,8 +5,9 @@
  */
 
 return [
-  'debug' => true, // Disable when in production
+  'debug' => false, // Disable when in production
   'cache' => [
-    'views' => true,
+    'directory' => null, // if null will use the sys_get_temp_dir
+    'views' 		=> true,
   ],
 ];
