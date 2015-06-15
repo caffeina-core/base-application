@@ -12,20 +12,23 @@ Loader::addPath(APP_DIR.'/classes');
 
 // Load options
 Options::loadPHP(APP_DIR.'/configs/common.php');
-foreach (File::search(APP_DIR.'/configs/','*.php',false) as $opts) {
+foreach (glob(APP_DIR.'/configs/*.php') as $opts) {
   (($prfx=basename($opts))!='common') and Options::loadPHP($opts,$prfx);
 }
+
+// Temp directory
+define ('TEMP_DIR', Options::get('cache.directory',sys_get_temp_dir()));
 
 // Caching strategy
 Cache::using([
   'files' => [
-    'cache_dir' => Options::get('cache.objects','/tmp')
+    'cache_dir' => TEMP_DIR
   ],
 ]);
 
 // Init Views
 View::using(new View\Twig(APP_DIR.'/templates',[
-    'cache'         => Options::get('cache.views',true) ? '/tmp' : false,
+    'cache'         => Options::get('cache.views',true) ? TEMP_DIR : false,
     'auto_reload'   => Options::get('debug',false),
 ]));
 
