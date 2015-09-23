@@ -1,1 +1,168 @@
-{}
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "91f593a28e50cc5342ebb4c8767cd51c",
+    "packages": [
+        {
+            "name": "caffeina-core/core",
+            "version": "0.9.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caffeina-core/core.git",
+                "reference": "c5a2467810da6bac699581eaace77cdfe7e0c962"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caffeina-core/core/zipball/c5a2467810da6bac699581eaace77cdfe7e0c962",
+                "reference": "c5a2467810da6bac699581eaace77cdfe7e0c962",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "classes/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stefano Azzolini",
+                    "email": "stefano.azzolini@caffeinalab.com"
+                }
+            ],
+            "description": "Caffeina - Core PHP SDK",
+            "homepage": "http://caffeina.it",
+            "keywords": [
+                "Toolbox",
+                "core",
+                "framework",
+                "sdk"
+            ],
+            "time": "2015-05-19 09:41:56"
+        },
+        {
+            "name": "caffeina-core/twig",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caffeina-core/twig.git",
+                "reference": "e9ce860842aad2d32bdfd34a36f4939b586453ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caffeina-core/twig/zipball/e9ce860842aad2d32bdfd34a36f4939b586453ea",
+                "reference": "e9ce860842aad2d32bdfd34a36f4939b586453ea",
+                "shasum": ""
+            },
+            "require": {
+                "caffeina-core/core": "*",
+                "php": ">=5.4",
+                "twig/twig": "*"
+            },
+            "type": "core-bundle",
+            "autoload": {
+                "classmap": [
+                    "classes/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stefano Azzolini",
+                    "email": "stefano.azzolini@caffeinalab.com"
+                }
+            ],
+            "description": "Twig service for Caffeina Core Views",
+            "homepage": "http://labs.caffeina.co/tech/core",
+            "keywords": [
+                "core",
+                "twig",
+                "view"
+            ],
+            "time": "2015-05-06 11:01:25"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.22.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
+                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.7"
+            },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.22-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2015-09-22 13:59:32"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.4"
+    },
+    "platform-dev": []
+}

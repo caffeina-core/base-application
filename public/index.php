@@ -5,16 +5,14 @@
  */
 
 define ('APP_DIR', dirname(__DIR__));
+define ('APP_MODE_CLI', false);
 require APP_DIR.'/vendor/autoload.php';
 
 // Load Classes
 Loader::addPath(APP_DIR.'/classes');
 
 // Load options
-Options::loadPHP(APP_DIR.'/configs/common.php');
-foreach (glob(APP_DIR.'/configs/*.php') as $opts) {
-  (($prfx=basename($opts))!='common') and Options::loadPHP($opts,$prfx);
-}
+Options::loadPHP(APP_DIR.'/config.php');
 
 // Temp directory
 define ('TEMP_DIR', Options::get('cache.directory',sys_get_temp_dir()));

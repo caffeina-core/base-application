@@ -2,23 +2,26 @@
 <?php
 
 define ('APP_DIR', __DIR__);
+define ('APP_MODE_CLI', true);
 require APP_DIR.'/vendor/autoload.php';
+
+// Mock $_SERVER environment
+$_SERVER['DOCUMENT_ROOT'] = APP_DIR.'/public';
+$_SERVER['HTTP_HOST']     = gethostname();
+$_SERVER['REQUEST_URI']   = '';
 
 // Load Classes
 Loader::addPath(APP_DIR.'/classes');
 
 // Load options
-Options::loadPHP(APP_DIR.'/configs/common.php');
-foreach (File::search(APP_DIR.'/configs/','*.php',false) as $opts) {
-  (($prfx=basename($opts))!='common') and Options::loadPHP($opts,$prfx);
-}
+Options::loadPHP(APP_DIR.'/config.php');
 
 // Caching strategy
 Cache::using([
-  'redis',
-  'files' => [
-    'cache_dir' => Options::get('cache.dir',APP_DIR.'/cache')
-  ],
+	'redis',
+	'files' => [
+		'cache_dir' => Options::get('cache.dir',APP_DIR.'/cache')
+	],
 ]);
 
 // App bootstrap
@@ -27,6 +30,6 @@ include APP_DIR.'/boot.php';
 Event::trigger('app.run');
 
 // Routes
-foreach (File::search(APP_DIR.'/commands/','*.php',false) as $routedef) include $routedef;
+foreach (glob(APP_DIR.'/commands/*.php') as $routedef) include $routedef;
 
 CLI::run();

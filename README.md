@@ -11,6 +11,8 @@ Create a new copy of this project via [composer](https://getcomposer.org/downloa
 
 ```bash
 $ composer create-project caffeina-core/base-application ./my-awesome-new-app
+$ cd my-awesome-new-app
+$ composer dump-autoload -o
 ```
 Done.
 
