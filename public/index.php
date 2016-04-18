@@ -8,6 +8,10 @@ define ('APP_DIR', dirname(__DIR__));
 define ('APP_MODE_CLI', false);
 require APP_DIR.'/vendor/autoload.php';
 
+$_response_send = new Deferred(function() {
+	Response::sent() || Response::send();
+});
+
 // Load Classes
 Loader::addPath(APP_DIR.'/classes');
 
@@ -45,4 +49,3 @@ foreach (glob(APP_DIR.'/routes/*.php') as $routedef) include $routedef;
 
 Event::trigger('app.dispatch');
 Route::dispatch();
-Response::send();

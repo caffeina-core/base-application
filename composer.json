@@ -4,7 +4,6 @@
     "description": "Caffeina Core - Application Skeleton",
     "keywords": ["core","skeleton","app"],
     "homepage": "http://labs.caffeina.co/tech/core",
-    "version": "1.0.5",
     "license": "MIT",
     "authors": [
         {
