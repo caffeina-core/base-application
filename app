@@ -29,7 +29,7 @@ include APP_DIR.'/boot.php';
 
 Event::trigger('app.run');
 
-// Routes
+// Commands
 foreach (glob(APP_DIR.'/commands/*.php') as $routedef) include $routedef;
 
 CLI::run();
